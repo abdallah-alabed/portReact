@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: black;
 }
 .perspective-text {
@@ -14,8 +14,80 @@ body{
   white-space: nowrap;
   color: transparent;
   -webkit-text-stroke: 2px #eeeeee;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+.exp {
+  position: absolute;
+  bottom: 75px;
+  justify-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  font-size: medium;
+  color: white;
 }
+.mainh1 {
+  position: absolute;
+  top: 75px;
+  justify-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  color: white;
+  font-family: 'Italianno', cursive;
+  font-weight: 100;
+}
+.content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  position: absolute;
+  top: 200px;
+width: 100%;
+margin: auto;
+line-height: 2;
+}
+.logo{
+  display: flex;
+}
+img{
+  height: 100px;
+  width: 100px;
+}
+.right h1{
+  font-size: 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 25px;
+  color: white;
 
+}
+.right p{
+  font-size: 30px;
+  color: white;
+}
+.left h1{
+  font-size: 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 25px;
+  color: white;
+
+}
+.left p{
+  font-size: 30px;
+  color: white;
+}
+.skills{
+  width: 70%;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+/* 
 .perspective-line {
   height: 50px;
   overflow: hidden;
@@ -50,17 +122,17 @@ p {
 }
 .perspective-line:nth-child(5) {
   left: 145px;
-}
+} */
 
 /* Sliding text on all lines */
-.perspective-text p {
+/* .perspective-text p {
   transform: translate(0, -50px);
   animation-timing-function: cubic-bezier(1, 0, 0, 1);
   animation: text-anim 4s infinite;
-}
+} */
 
 /* Solid text on hover */
-.perspective-line:hover p {
+/* .perspective-line:hover p {
   color: #eeeeee;
 }
 
@@ -74,121 +146,122 @@ p {
   100% {
     transform: translate(0, 0);
   }
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+}
+html {
+  font-size: 40px;
+  font-family: "Montserrat";
+  scroll-behavior: smooth;
+}
+#sec-1 {
+  background-image: url("https://res.allmacwallpaper.com/get/iMac-27-inch-wallpapers/green-blue-violet-gradient-8k-2560x1440/22378-10.jpg");
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#sec-2 {
+  background-color: rgb(214, 228, 92);
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  border: 2px solid black;
+  position: absolute;
+  left: 49%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 49%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid black;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.3s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
 }
 
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  html{
-    font-size: 40px;
-    font-family: 'Montserrat';
-    scroll-behavior: smooth;
-  }
-  section{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #sec-1{
-    background-color: rgb(214, 228, 92);
-  }
-  #sec-2{
-    background-color: rgb(214, 228, 92);
-  }
-  .scroll-down{
-    height: 50px;
-    width: 30px;
-    border: 2px solid black;
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  .scroll-down::before,
-  .scroll-down::after{
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    height: 10px;
-    width: 10px;
-    transform:translate(-50%, -100%) rotate(45deg);
-    border: 2px solid black;
-    border-top: transparent;
-    border-left: transparent;
-    animation: scroll-down 1s ease-in-out infinite;
-  }
-  .scroll-down::before{
-    top: 30%;
-    animation-delay: .3s;
-    /* animation: scroll-down 1s ease-in-out infinite; */
-  }
-  
-  @keyframes scroll-down{
-    0%{
-      /* top:20%; */
-      opacity: 0;
-    }
-    30%{
-      opacity: 1;
-    }
-    60%{
-      opacity: 1;
-    }
-    100%{
-      top:90%;
-      opacity:0;
-    }
-  }
+.scroll-up {
+  height: 50px;
+  width: 30px;
+  border: 2px solid black;
+  position: absolute;
+  left: 49%;
+  bottom: -100px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-up::before,
+.scroll-up::after {
+  content: "";
+  position: absolute;
+  top: 29%;
+  left: 49%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(225deg);
+  border: 2px solid black;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-up 1s ease-in-out infinite;
+}
+.scroll-up::before {
+  top: 30%;
+  animation-delay: 0.3s;
+}
 
-  .scroll-up{
-    height: 50px;
-    width: 30px;
-    border: 2px solid black;
-    position: absolute;
-    left: 50%;
-    bottom: -100px;
-    border-radius: 50px;
-    cursor: pointer;
+@keyframes scroll-up {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+    top: 90%;
   }
-  .scroll-up::before,
-  .scroll-up::after{
-    content: '';
-    position: absolute;
-    top: 29%;
-    left: 50%;
-    height: 10px;
-    width: 10px;
-    transform:translate(-50%, -100%) rotate(225deg);
-    border: 2px solid black;
-    border-top: transparent;
-    border-left: transparent;
-    animation: scroll-up 1s ease-in-out infinite;
+  30% {
+    opacity: 1;
   }
-  .scroll-up::before{
-    top: 30%;
-    animation-delay: .3s;
+  60% {
+    opacity: 1;
   }
-  
-  @keyframes scroll-up{
-    0%{
-      /* top:20%; */
-      opacity: 0;
-      top:90%;
-    }
-    30%{
-      opacity: 1;
-    }
-    60%{
-      opacity: 1;
-    }
-    100%{
-      opacity:0;
-    }
+  100% {
+    opacity: 0;
   }
+}
