@@ -38,13 +38,11 @@
   font-weight: 100;
 }
 .content{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
   position: absolute;
-  top: 200px;
+  margin: 0;
+  padding: 0;
+  top: 50px;
 width: 100%;
-margin: auto;
 line-height: 2;
 }
 .logo{
@@ -264,4 +262,42 @@ html {
   100% {
     opacity: 0;
   }
+}
+
+.row{
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+.col{
+  flex-basis: 50%;
+}
+.col h1{
+  font-size: 100px;
+}
+.col p{
+  font-size: 11px;
+line-height: 15px;
+}
+.card{
+  width: 300px;
+  height: 350px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image: url("https://res.allmacwallpaper.com/get/iMac-27-inch-wallpapers/green-blue-violet-gradient-8k-2560x1440/22378-10.jpg");
+transition: transform 0.5s;
+}
+.card:hover{
+  transform: translateY(-10px);
+}
+.card h5{
+  text-shadow: 0 0 5px #999;
+}
+.card p{
+  text-shadow: 0 0 15px #000;
+font-size: 8px;
 }
